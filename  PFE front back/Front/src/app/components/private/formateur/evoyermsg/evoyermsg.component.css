@@ -1,0 +1,9 @@
+.imgreclamation {
+    background: url("/assets/img/lll.png") no-repeat;
+    background-position: center;
+    background-size: 400px;
+}
+
+.titrer {
+    color: rgb(114, 124, 134);
+}

@@ -1,0 +1,19 @@
+.vide1 {
+    height: 60px;
+    background-color: gray;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: honeydew;
+}
+
+.marge {
+    margin-left: 5px;
+}
+
+.titre {
+    color: darkmagenta;
+}
+
+.wissal {
+    background-color: blueviolet;
+}

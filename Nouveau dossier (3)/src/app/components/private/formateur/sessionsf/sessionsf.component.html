@@ -1,0 +1,75 @@
+<div id="wrapper">
+
+
+    <app-sidebar></app-sidebar>
+
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+
+        <div id="content">
+
+
+            <div class="container-fluid">
+                <br> <br>
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">
+                        Mes sessions de formations
+                    </h1>
+
+                </div>
+                <div class="row mb-3">
+
+                </div>
+
+                <div class="row">
+
+
+                    <div class="col">
+                        <div class="card ">
+
+
+
+                            <div class="card-body" class="session">
+                                <div *ngIf="listesession.length==0" class="alert alert-secondary"> vous n'etes pas accordé a aucune session de formation </div>
+                                <div *ngFor="let i of listesession" class="petitcard">
+
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary" class="titre"><b><i> Session    :</i>{{i.theme}}</b> </h6>
+                                    </div>
+                                    <div class="card-body" class="w">
+                                        <div class="pos">
+                                            <i class="fas fa-calendar-week"></i> De {{i.datedeb}} à {{i.datefin}} <br><br>
+                                            <i class="fas fa-user-tie"></i> Animé par moi même<br><br>
+                                            <i class="far fa-clock"></i> {{i.heuredeb}}-{{i.heurefin}} <br><br>
+
+
+
+                                            <br>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <hr>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

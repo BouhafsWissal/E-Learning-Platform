@@ -1,0 +1,72 @@
+<div id="wrapper">
+
+
+    <app-sidebar></app-sidebar>
+
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+
+        <div id="content">
+
+
+            <div class="container-fluid">
+                <br> <br>
+
+                <div class="form-group row">
+                    <div class="col-sm-8 ">
+                        <h1 class="h3 mb-0 text-gray-800">Messagerie</h1>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-sm btn-secondary mx-3" [routerLink]="['/envoyemsg']">
+                            <i class="fas fa-plus"></i>
+                    </button>
+                    </div>
+                </div>
+
+                <br>
+
+
+
+                <div class="card shadow mb-4" *ngFor="let i of listemessage" class="cardw">
+
+
+                    <div class="border">
+                        <div class="card-body">
+                            De la part de l'apprenant : {{i.nomemetteur}} <br> <br> <br> {{i.message}}
+
+                            <br> <br> <br>
+                            <div class="action">
+                                <button class="btn btn-sm btn-secondary mx-3" [routerLink]="['/envoyermsg']">
+                                    <i class="fas fa-reply-all"></i>
+                            </button>
+                                <a href="#" data-toggle="modal" data-target="#deleteModal">
+                                    <button type="submit" class="btn btn-sm btn-secondary" (click)=deletemessaage(i)>
+                                <i class="fas fa-trash" ></i>
+                            </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="triangle"></div>
+
+
+                    <br> <br>
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <br>
+</div>

@@ -1,0 +1,43 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif
+}
+
+body,
+html {
+    height: 100%;
+    line-height: 1.8;
+}
+
+
+/* Full height image header */
+
+.image1 {
+    width: 5%;
+    height: 50%;
+}
+
+.talk {
+    color: mediumvioletred;
+    background-color: rgb(214, 211, 211);
+    margin-right: 50%;
+    font-size: 300%;
+}
+
+.bgimg-1 {
+    width: 1380px;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/assets/img/pc12.jpg");
+    min-height: 100%;
+}
+
+.w3-bar .w3-button {
+    padding: 16px;
+}

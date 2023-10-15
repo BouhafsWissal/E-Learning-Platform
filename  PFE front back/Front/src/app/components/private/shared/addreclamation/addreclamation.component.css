@@ -1,0 +1,17 @@
+    .imgreclamation {
+        background: url("/assets/img/reclamation.jpg") no-repeat;
+        background-position: center;
+        background-size: 320px;
+    }
+    
+    .titrer {
+        color: rgb(114, 124, 134);
+    }
+    
+    buton {
+        background: purple;
+    }
+    
+    card-body {
+        background: rebeccapurple;
+    }

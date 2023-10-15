@@ -1,0 +1,17 @@
+.titre {
+    color: rgb(152, 104, 197);
+}
+
+.user {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.pos {
+    margin: 20px;
+}
+
+.session {
+    border-radius: 0.5cm;
+    border-color: mediumpurple;
+}

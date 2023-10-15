@@ -1,0 +1,91 @@
+<body>
+
+    <div class="main">
+        <div class="signup">
+            <form class="user" [formGroup]="myform" (ngSubmit)="saveupdate()">
+                <label style="margin-left: -55px;" for="chk" aria-hidden="true">Modifier l'apprenant </label>
+                <div class="row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Nom" formControlName="cnom">
+                        <div *ngIf="cnom.touched && cnom.invalid">
+                            <small *ngIf="cnom.errors.required" class="text-danger">le champs nom est obligatoire <br> </small>
+                            <small *ngIf="cnom.errors.minlength" class="text-danger">  le champs doit contenir plus que 2 characteres    </small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Prénom" formControlName="prenom" formControlName="cprenom">
+                        <div *ngIf="cprenom.touched && cprenom.invalid">
+                            <small *ngIf="cprenom.errors.required" class="text-danger">le champs prenom est obligatoire <br> </small>
+                            <small *ngIf="cprenom.errors.minlength" class="text-danger">  le champs doit contenir plus que 3 characteres    </small>
+
+                        </div>
+                    </div>
+
+                    <div class=" mb-4 mb-sm-0">
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Adresse E-mail" formControlName="cemail">
+                            <div *ngIf="cemail.touched && cemail.invalid">
+                                <small *ngIf="cemail.errors.required" class="text-danger">le champs email est obligatoire <br> </small>
+                                <small *ngIf="cemail.errors.email" class="text-danger">  le champs saisie doit etre un email    </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class=" mb-4 mb-sm-0">
+                        <input class="form-control form-control-user" type="date" id="example-date-input" placeholder="Date_naissance " formControlName="cdate">
+                        <div *ngIf="cdate.touched && cdate.invalid">
+                            <small *ngIf="cdate.errors.required" class="text-danger">le champs date de naissance  est obligatoire <br> </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="number" class="form-control form-control-user" id="exampleInputCin" placeholder="CIN" formControlName="ccin">
+                            <div *ngIf="ccin.touched && ccin.invalid">
+                                <small *ngIf="ccin.errors.required" class="text-danger">le champs CIN est obligatoire <br> </small>
+                                <small *ngIf="ccin.errors.minlength" class="text-danger">  le champs doit contenir exactement 8 characteres    </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="tel" class="form-control form-control-user" id="exampleInpuTel" placeholder="Tél" formControlName="ctel">
+                            <div *ngIf="ctel.touched && ctel.invalid">
+                                <small *ngIf="ctel.errors.required" class="text-danger">le champs Tél est obligatoire <br> </small>
+                                <small *ngIf="ctel.errors.minlength" class="text-danger">  le champs doit contenir exactement 8 characteres    </small>
+                                <small *ngIf="ctel.errors.maxlength" class="text-danger">  le champs doit contenir exactement 8 characteres     </small>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="mb-4 mb-sm-0">
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Mot De Passe " formControlName="cmotdepasse">
+                            <div *ngIf="cmotdepasse.touched && cmotdepasse.invalid">
+                                <small *ngIf="cmotdepasse.errors.required" class="text-danger">le champs mot de passe est obligatoire <br> </small>
+                                <small *ngIf="cmotdepasse.errors.minlength" class="text-danger">  le champs doit contenir au moins 6  characteres    </small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <button type="submit" class="btn btn-secondary  btn-light">
+                    Enregistrer les modifications 
+                  </button>
+
+            </form>
+        </div>
+
+
+    </div>
+</body>

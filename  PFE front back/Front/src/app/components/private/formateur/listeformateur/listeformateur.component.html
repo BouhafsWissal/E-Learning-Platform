@@ -1,0 +1,115 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <!--!   <app-topbar></app-topbar> -->
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <br> <br>
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Géstion des Formateurs</h1>
+
+                </div>
+                <div class="row mb-4">
+
+
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+
+                        </div>
+                        <div class="col-sm-3">
+
+                            <input type="text" class="form-control form-control-user" [(ngModel)]="nom" (input)=search() placeholder="Recherche par Nom" />
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary" class="titre">Liste des Formateurs </h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div *ngIf="listeformateur.length==0" class="alert alert-secondary"> no people found </div>
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th> ID</th>
+                                                <th> Nom</th>
+                                                <th> Prénom</th>
+                                                <th> CIN </th>
+                                                <th>E-mail</th>
+                                                <th>Date-N</th>
+                                                <th> Tel </th>
+                                                <th> Actions </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody *ngFor="let i of listeformateur">
+                                            <tr>
+                                                <td> {{ i.id }}</td>
+                                                <td> {{i.nom}}</td>
+                                                <td> {{i.prenom}} </td>
+                                                <td> {{ i.cin}} </td>
+                                                <td> {{ i.email}} </td>
+                                                <td> {{ i.daten}} </td>
+                                                <td> {{ i.tel}} </td>
+                                                <td>
+
+                                                    <button class="btn btn-sm btn-secondary mx-3" [routerLink]="['/updateformateur',i.id]">
+                                                    <i class="fa fa-pen"></i>
+                                                </button>
+                                                    <a href="#" data-toggle="modal" data-target="#deleteModal">
+                                                        <button type="submit" class="btn btn-sm btn-secondary" (click)=deleteformateur(i)>
+                                                    <i class="fas fa-trash" ></i>
+                                                </button>
+                                                    </a>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>

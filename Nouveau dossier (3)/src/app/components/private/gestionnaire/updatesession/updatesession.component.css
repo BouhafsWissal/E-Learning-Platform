@@ -1,0 +1,10 @@
+.w {
+    margin-right: 110px;
+    margin-left: 110px;
+    border: solid 0.3cm rgb(128, 108, 168);
+    border-radius: 30px;
+}
+
+.titre {
+    color: rgb(112, 88, 160);
+}

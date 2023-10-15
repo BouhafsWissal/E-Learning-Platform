@@ -1,0 +1,85 @@
+<div id="wrapper">
+
+
+    <app-sidebar></app-sidebar>
+
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+
+        <div id="content">
+
+
+            <div class="container-fluid">
+                <br> <br>
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">
+
+                    </h1>
+
+                </div>
+
+
+
+                <div *ngIf="listesession.length==0" class="alert alert-secondary"> Aucune Session n'est trouvée</div>
+                <div class="main" *ngFor="let i of listesession">
+
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="m-0 font-weight-bold text-primary" class="titre"><b><i> Session    :</i>{{i.theme}}</b> </h6>
+                            </div>
+
+                            <div class="col">
+                                <div class="ll">
+                                    <button type="submit" class="btn btn-secondary" (click)="participer(i)"> Participer </button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body" (ngSubmit)="participer()">
+
+
+                        <i class="fas fa-calendar-week"></i> <label> Du {{i.datedeb}} au {{i.datefin}}</label> <br><br>
+
+                        <i class="far fa-clock"></i> <label>{{i.heuredeb}}-{{i.heurefin}}</label> <br><br>
+                        <i class="fas fa-user-tie"></i> <label> Animé par :{{i.nomformateur}} </label><br><br>
+
+                        <i class="fas fa-chair"></i> <label>Places Restantes : {{i.nombredepace}} </label> <br><br>
+                        <i class="fas fa-dollar-sign"></i> <label for="">{{i.prix}} DT</label>
+
+                        <br> <br>
+
+
+
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="marge">
+                            <button type="button" class="btn btn-light" [routerLink]="['/tableevaluation',i.id]">Evaluations</button>
+                            <button class="btn btn-sm btn-secondary mx-3" [routerLink]="['/updatesession',i.id]">
+                            <i class="fa fa-pen"></i>
+                        </button>
+                            <a href="#" data-toggle="modal" data-target="#deleteModal">
+                                <button type="submit" class="btn btn-sm btn-secondary" (click)=deletesession(i)>
+                            <i class="fas fa-trash" ></i>
+                        </button>
+                            </a>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

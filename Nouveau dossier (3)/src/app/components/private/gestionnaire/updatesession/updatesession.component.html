@@ -1,0 +1,122 @@
+<div class="body">
+
+
+
+
+
+
+
+    <div id="content">
+
+
+        <div class="container-fluid">
+            <br> <br>
+
+
+
+            <div class="row">
+
+
+                <div class="col">
+                    <div class="card shadow mb-4" class="w">
+
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary" class="titre"><b><i> Modifier la Session</i></b> </h6>
+                        </div>
+
+                        <div class="card-body">
+
+                            <form class="user" class="form-control-user" [formGroup]="myform" (ngSubmit)="saveupdate()">
+
+                                <div class="form-group">
+                                    <label class="floatingInput"> Théme de la session :</label>
+                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Théme de la Session" formControlName="ctheme">
+                                    <div *ngIf="ctheme.touched && ctheme.invalid">
+                                        <small *ngIf="ctheme.errors.required" class="text-danger">ce champs est obligatoire <br> </small>
+                                        <small *ngIf="ctheme.errors.minlength" class="text-danger">  le champs doit contenir plus que 2 characteres    </small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label class="floatingInput"> Date Debut de l session : </label>
+                                        <input type="date" class="form-control form-control-user" id="exampledatedeb" placeholder="Date Debut " formControlName="cdatedeb">
+                                        <div *ngIf="cdatedeb.touched && cdatedeb.invalid">
+                                            <small *ngIf="cdatedeb.errors.required" class="text-danger">ce champs est obligatoire <br> </small>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="floatingInput"> Date Fin de la session :</label>
+                                        <input type="date" class="form-control form-control-user" id="exampleLastName" placeholder="Date Fin" formControlName="cdatefin">
+                                        <div *ngIf="cdatefin.touched && cdatefin.invalid">
+                                            <small *ngIf="cdatefin.errors.required" class="text-danger">le champs nom est obligatoire <br> </small>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label class="floatingInput"> Heure debut de chaque seance  :</label>
+                                        <input type="time" class="form-control form-control-user" id="exampleheuredeb" placeholder="Heure Debut " formControlName="cheuredeb">
+                                        <div *ngIf="cheuredeb.touched && cheuredeb.invalid">
+                                            <small *ngIf="cheuredeb.errors.required" class="text-danger">le champs nom est obligatoire <br> </small>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label class="floatingInput"> Heure fin de chaque seance  :</label>
+                                        <input type="time" class="form-control form-control-user" id="exampleHeurefin" placeholder="Heure Fin" formControlName="cheurefin">
+                                        <div *ngIf="cheurefin.touched && cheurefin.invalid">
+                                            <small *ngIf="cheurefin.errors.required" class="text-danger">le champs nom est obligatoire <br> </small>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <label class="floatingInput"> Nombre de places  :</label>
+                                        <input type="number" class="form-control form-control-user" id="nbapprenant" placeholder="Nombre de place  " formControlName="cnombredeplace">
+                                        <div *ngIf="cnombredeplace.touched && cnombredeplace.invalid">
+                                            <small *ngIf="cnombredeplace.errors.required" class="text-danger">le champs nom est obligatoire <br> </small>
+                                            <small *ngIf="cnombredeplace.errors.pattern" class="text-danger">  le champs est invalide    </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="floatingInput"> Prix  :</label>
+                                        <input type="number" class="form-control form-control-user" id="exampleprix" placeholder="Prix" formControlName="cprix">
+                                        <div *ngIf="cprix.touched && cprix.invalid">
+                                            <small *ngIf="cprix.errors.required" class="text-danger">le champs nom est obligatoire <br> </small>
+                                            <small *ngIf="cprix.errors.pattern" class="text-danger">  le champs est invalide    </small>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="floatingInput">Ajouter un formateur :</label>
+                                        <input type="text" class="form-control form-control-user" id="formateur" placeholder="idformateur" formControlName="cidformateur">
+                                        <div *ngIf="cidformateur.touched && cidformateur.invalid">
+                                            <small *ngIf="cidformateur.errors.required" class="text-danger">le champs nom est obligatoire <br> </small>
+                                            <small *ngIf="cidformateur.errors.pattern" class="text-danger">  le champsest invalide    </small>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </form>
+
+
+
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-secondary" (click)="saveupdate()"> Enregistrer les modifications </button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>

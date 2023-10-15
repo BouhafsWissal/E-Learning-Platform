@@ -1,0 +1,32 @@
+/* .card-body {
+    border-radius: 20px;
+    border-color: black;
+    background-color: blueviolet;
+    width: 50%;
+    margin-top: 20%;
+} */
+
+.border {
+    border-radius: 20px;
+    border-color: black;
+    width: 50%;
+    height: 220px;
+    justify-content: center;
+    margin-left: 25%;
+    background: linear-gradient(to right, #d68ddb, #9f9ebf);
+}
+
+.triangle {
+    margin-left: 26.4%;
+    margin-top: -1.2px;
+    width: 0;
+    height: 5;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 50px solid #d68ddb;
+    /* background: linear-gradient(to right, #d68ddb, #ddb5d8); */
+}
+
+.action {
+    margin-left: 400px;
+}

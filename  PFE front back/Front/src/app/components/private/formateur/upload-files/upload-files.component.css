@@ -1,0 +1,16 @@
+.upload {
+    margin: 70px;
+    margin-top: 20px;
+    border-radius: 30px;
+    size: 100%;
+    border: solid rgb(148, 146, 146) 1.5cm
+}
+
+.liste {
+    margin-left: 70px;
+    margin-top: 50px;
+    font-size: larger;
+    font-family: cursive;
+    font-style: italic;
+    color: slategrey;
+}

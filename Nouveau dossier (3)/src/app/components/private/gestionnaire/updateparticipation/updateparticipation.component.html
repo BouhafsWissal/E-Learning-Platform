@@ -1,0 +1,14 @@
+<form class="etat">
+    <div class="form-group" [formGroup]="myform" (ngSubmit)="saveupdate()">
+        <br>
+        <label for="exampleInputEmail1" class="t">Veuillez modifier l'Etat : </label>
+        <input type="text" class="form-control" id="Etat" placeholder="Etat" formControlName="cetat">
+        <div *ngIf="cetat.touched && cetat.invalid">
+            <small *ngIf="cetat.errors.required" class="text-danger">le champs nom est obligatoire </small>
+
+        </div>
+    </div>
+    <div class="b"> <button type="submit" class="b" class="btn btn-secondary" (click)="saveupdate()">Enregistrer les modifications  </button></div>
+
+
+</form>

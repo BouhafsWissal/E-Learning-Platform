@@ -1,0 +1,12 @@
+        .cardbody {
+            border: solid 0.09cm darkgrey;
+        }
+        
+        .liste {
+            border-radius: 30px;
+            font-size: 25px;
+            margin-top: 50px;
+            font-family: cursive;
+            font-style: italic;
+            color: slategrey;
+        }

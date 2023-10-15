@@ -1,0 +1,72 @@
+<body class="Reclamation">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block imgreclamation"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4"> <span class="titrer">Saisir Votre Reclamation !</span></h1>
+                                    </div>
+                                    <form class="user" [formGroup]="myform" (ngSubmit)="addreclamation()">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Entrer votre adresse email..." formControlName="email">
+                                            <div *ngIf="email.touched && email.invalid">
+                                                <small *ngIf="email.errors.required" class="text-danger">le champs email est obligatoire <br> </small>
+                                                <small *ngIf="email.errors.email" class="text-danger">  le champs saisie doit etre un email    </small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user" id="theme" placeholder="Théme du Reclamation" formControlName="theme">
+                                            <div *ngIf="theme.touched && theme.invalid">
+                                                <small *ngIf="theme.errors.required" class="text-danger">Ce champs est obligatoire <br> </small>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="S'il vous plait ! expliquer en detail le sujet de votre 'Reclamation' ! " formControlName="texte"></textarea>
+                                            <div *ngIf="texte.touched && texte.invalid">
+                                                <small *ngIf="texte.errors.required" class="text-danger">Ce champs est obligatoire <br> </small>
+
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary btn-user btn-block">
+                                               Evoyer 
+                                        </button>
+
+                                    </form>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>

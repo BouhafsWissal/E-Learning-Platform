@@ -1,0 +1,22 @@
+/* .card-body {
+    border-radius: 20px;
+    border-color: black;
+    background-color: blueviolet;
+    width: 50%;
+    margin-top: 20%;
+} */
+
+.border {
+    box-shadow: white;
+    border-radius: 20px;
+    border-color: white;
+    width: 70%;
+    height: 250px;
+    justify-content: center;
+    margin-left: 12%;
+    background: linear-gradient(to right, #d68ddb, #9f9ebf);
+}
+
+.action {
+    margin-left: 700px;
+}

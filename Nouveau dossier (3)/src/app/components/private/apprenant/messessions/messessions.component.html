@@ -1,0 +1,76 @@
+<div id="wrapper">
+
+
+    <app-sidebar></app-sidebar>
+
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+
+        <div id="content">
+
+
+            <div class="container-fluid">
+                <br> <br>
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">
+                        Mes sessions
+                    </h1>
+
+                </div>
+                <div class="row mb-3">
+
+                </div>
+
+                <div class="row">
+
+
+                    <div class="col">
+                        <div class="card ">
+
+
+
+                            <div class="card-body" class="session">
+                                <div *ngIf="listeparticipation.length==0" class="alert alert-secondary"> Aucune session n'est trouvée !consulter la liste des sessions ou verifier votre paiement ! </div>
+                                <div *ngFor="let i of listeparticipation" class="petitcard">
+
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary" class="titre"><b><i> Session    :</i>{{i.nomsession}}</b> </h6>
+                                    </div>
+                                    <div class="card-body" class="w">
+                                        <div class="pos">
+                                            <i class="fas fa-calendar-week"></i> De {{i.datedeb}} à {{i.datefin}} <br><br>
+
+                                            <i class="fas fa-user-tie"></i> Animé par :{{i.nomformateur}} <br><br>
+
+
+
+                                            <br> <br>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <button type="button" class="btn btn-dark" [routerLink]="['/evaluersession',i.idsession,idapp]">Evaluer votre session</button>
+                                    </div>
+                                    <hr>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

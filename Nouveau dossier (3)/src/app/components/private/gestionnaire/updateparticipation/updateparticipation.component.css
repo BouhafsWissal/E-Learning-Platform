@@ -1,0 +1,17 @@
+.etat {
+    border-radius: 30px;
+    border: solid 0.2cm grey;
+    margin: 100px;
+}
+
+.t {
+    margin-left: 15px;
+    font-family: cursive;
+    color: indigo;
+    font-size: 18px;
+}
+
+.b {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}

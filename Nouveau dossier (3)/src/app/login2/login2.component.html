@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col">
+
+        <div *ngIf="peoplelist.length==0" class="alert alert-warning"> no people found </div>
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th> #</th>
+                    <th> name </th>
+                    <th> username</th>
+                    <th> phone </th>
+                    <th> #</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let i of peoplelist">
+                <tr>
+                    <td> {{ i.id }}</td>
+                    <td> {{i.name}}</td>
+                    <td> {{i.username}} </td>
+                    <td> {{ i.phone}} </td>
+
+                    <button class="btn btn-info">Details</button>
+                    <button class="btn btn-danger mx-3" (click)=delete(person)>delete</button>
+                    <button class="btn btn-warning">Update</button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

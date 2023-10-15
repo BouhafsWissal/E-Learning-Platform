@@ -1,0 +1,85 @@
+<div id="wrapper">
+
+
+    <app-sidebar></app-sidebar>
+
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+
+        <div id="content">
+
+
+            <div class="container-fluid">
+                <br> <br>
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Gérer les Participations </h1>
+
+                </div>
+                <div class="row mb-3">
+
+                </div>
+
+                <div class="row">
+
+
+                    <div class="col">
+                        <div class="card shadow mb-4">
+
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary" class="titre">Les Demandes de Participations </h6>
+                            </div>
+
+                            <div class="card-body">
+                                <div *ngIf="listeparticipation.length==0" class="alert alert-secondary"> no Participation found </div>
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th> ID</th>
+                                            <th> Id_Apprenant</th>
+                                            <th> Id_Session</th>
+                                            <th> Nom_session </th>
+                                            <th>Etat</th>
+
+                                            <th> #</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody *ngFor="let i of listeparticipation">
+                                        <tr>
+                                            <td> {{ i.id }}</td>
+                                            <td> {{i.idapprenant}}</td>
+                                            <td> {{i.idsession}} </td>
+                                            <td> {{ i.nomsession}} </td>
+                                            <td> {{ i.etat}} </td>
+
+                                            <td>
+
+                                                <button class="btn btn-sm btn-secondary mx-3" [routerLink]="['/updateparticipation',i.id]">
+                                                <i class="fa fa-pen"></i>
+                                            </button>
+                                                <a href="#" data-toggle="modal" data-target="#deleteModal">
+                                                    <button type="submit" class="btn btn-sm btn-secondary" (click)=deleteparticipation(i)>
+                                                <i class="fas fa-trash" ></i>
+                                            </button>
+                                                </a>
+
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

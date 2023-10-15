@@ -1,0 +1,71 @@
+<div id="wrapper">
+
+
+    <app-sidebar></app-sidebar>
+
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+
+        <div id="content">
+
+
+            <div class="container-fluid">
+                <br> <br>
+
+                <div class="form-group row">
+                    <div class="col-sm-8 ">
+                        <h1 class="h3 mb-0 text-gray-800"> Gestion des Reclamations</h1>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <!-- <button class="btn btn-sm btn-secondary mx-3" [routerLink]="['/envoyermsg']">
+                            <i class="fas fa-plus"></i>
+                    </button> -->
+                    </div>
+                </div>
+
+                <br>
+
+
+                <div *ngIf="listereclamation.length==0" class="alert alert-secondary"> Aucune reclamation n'est trouvée </div>
+                <div class="card shadow mb-4" *ngFor="let i of listereclamation" class="cardw">
+
+
+                    <div class="border">
+
+                        <div class="card-body ">
+                            <h6 class="h6 mb-0 text-gray-800 " class="titre"><b><i> Théme du Reclamation :</i>{{i.theme}}</b> </h6>
+                            <hr>
+                            <span class="wissal">Email de l'émetteur </span> : {{i.mailemetteur}} <br>
+                            <br><span class="wissal">Sujet du réclamation </span> : {{ i.texte}}
+                            <br> <br>
+                            <br>
+                            <div class="action">
+                                <a href="#" data-toggle="modal" data-target="#deleteModal">
+                                    <button type="submit" class="btn btn-sm btn-secondary" (click)=deletemessaage(i)>
+                                <i class="fas fa-trash" ></i>
+                            </button>
+                                </a>
+                            </div>
+                        </div> <br>
+                    </div>
+                    <br>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
